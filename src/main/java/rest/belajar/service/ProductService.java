@@ -16,7 +16,7 @@ import rest.belajar.repository.ProductRepository;
 public class ProductService {
 	
 	@Autowired
-	private ProductRepository productRepo;
+	public ProductRepository productRepo;
 	
 	public ProductModel save(ProductModel product) {
 		return productRepo.save(product);

@@ -8,6 +8,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
@@ -31,6 +33,9 @@ public class ProductModel implements Serializable{
 	
 	private CategoryModel category;
 	@ManyToMany
+	@JoinTable(name="tbl_product_supplier", 
+	joinColumns = @JoinColumn(name = "product_id"),
+	inverseJoinColumns = @JoinColumn(name="supplier_id"))
 	private Set<SupplierModel> supplier;
 	
 	public ProductModel() {

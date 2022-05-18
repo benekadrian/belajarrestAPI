@@ -25,7 +25,7 @@ public class SupplierModel implements Serializable{
 	private String address;
 	@Column(length = 100, nullable = false, unique = true)
 	private String email;
-	@ManyToMany
+	@ManyToMany(mappedBy = "supplier")
 	private Set<ProductModel> products;
 	
 	public Set<ProductModel> getProducts() {
@@ -60,6 +60,10 @@ public class SupplierModel implements Serializable{
 	}
 	public static long getSerialversionuid() {
 		return serialVersionUID;
+	}
+	public SupplierModel save(SupplierModel supplier) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 }

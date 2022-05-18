@@ -14,9 +14,7 @@ import javax.persistence.Table;
 @Table(name="tbl_categories")
 public class CategoryModel implements Serializable{
 	
-	/**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
