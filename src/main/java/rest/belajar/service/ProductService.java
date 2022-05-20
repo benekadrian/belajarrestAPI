@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import rest.belajar.model.ProductModel;
+import rest.belajar.model.SupplierModel;
 import rest.belajar.repository.ProductRepository;
 
 @Service
@@ -36,5 +37,9 @@ public class ProductService {
 	}
 	public List<ProductModel> findByName(String name){
 		return productRepo.findByNameContains(name);
+	}
+	public void addSupplier(SupplierModel supplier, Long productId) {
+		// TODO Auto-generated method stub
+		
 	}
 }

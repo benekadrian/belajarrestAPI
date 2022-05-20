@@ -20,7 +20,7 @@ public class CategoryService {
 		return categoryRepo.save(category);
 	}
 	public CategoryModel findOne(Long id) {
-		Optional<CategoryRepository> category = Optional.empty();
+		Optional<CategoryModel> category = Optional.empty();
 		if(!category.isPresent()){
 			return null;
 		}
